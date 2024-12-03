@@ -3,10 +3,10 @@ import { desafios } from "./desafios.js";
 import { projetos } from "./projetos.js";
 
 // Seleção de elementos do DOM para interação
-const navigation = document.querySelector("#navigation"); // Menu de navegação
-const backToTopButton = document.querySelector("#backToTopButton"); // Botão "Voltar ao topo"
-const toggle = document.querySelector("#sw-checkbox"); // Switch para alternar modos de tema
-const projectsSection = document.querySelector("#projects .wrapper"); // Seção de projetos
+const navigation = document.querySelector("#navigation"); 
+const backToTopButton = document.querySelector("#backToTopButton"); 
+const toggle = document.querySelector("#sw-checkbox"); 
+const projectsSection = document.querySelector("#projects .wrapper"); 
 
 const notebook_1 = document.querySelector("#notebook-1"); // Elemento notebook-1
 const notebook_2 = document.querySelector("#notebook-2"); // Elemento notebook-2
@@ -30,21 +30,21 @@ window.addEventListener("load", function begin() {
 
 // Evento de scroll para realizar ações ao rolar a página
 window.addEventListener("scroll", onScroll);
-onScroll(); // Chama a função imediatamente para o primeiro carregamento
+onScroll(); 
 
 // Define animações que são removidas após 4 segundos
 window.onload = setTimeout(() => {
-  notebook_1.style.opacity = 0; // Torna notebook-1 invisível
-  notebook_1.style.animation = "none"; // Remove animação de notebook-1
-  notebook_2.style.animation = "none"; // Remove animação de notebook-2
-  notebook_2_white.style.animation = "none"; // Remove animação de notebook-2 branco
-  vidro.style.animation = "none"; // Remove animação do vidro
+  notebook_1.style.opacity = 0; 
+  notebook_1.style.animation = "none"; 
+  notebook_2.style.animation = "none";
+  notebook_2_white.style.animation = "none"; 
+  vidro.style.animation = "none"; 
 }, 4000);
 
 // Função de scroll que chama outras funções relacionadas à rolagem da página
 function onScroll() {
-  showNavOnScroll(); // Exibe ou esconde o menu de navegação conforme o scroll
-  showBackToTopButtonOnScroll(); // Exibe ou esconde o botão "Voltar ao topo"
+  showNavOnScroll(); 
+  showBackToTopButtonOnScroll(); 
   
   // Ativa a classe 'active' no menu conforme a seção visível
   activateMenuAtCurrentSection(about);
@@ -55,9 +55,9 @@ function onScroll() {
 
 // Função que ativa o item de menu da seção atual
 function activateMenuAtCurrentSection(section) {
-  const targetLine = scrollY + innerHeight / 2; // Linha-alvo para comparar
-  const sectionTop = section.offsetTop; // Posição superior da seção
-  const sectionHeight = section.offsetHeight; // Altura da seção
+  const targetLine = scrollY + innerHeight / 2;
+  const sectionTop = section.offsetTop; 
+  const sectionHeight = section.offsetHeight; 
 
   // Condições para verificar se a seção está visível no meio da tela
   const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
