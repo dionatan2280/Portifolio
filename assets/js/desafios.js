@@ -1,4 +1,6 @@
+// Define uma função chamada 'desafios' que recebe um elemento HTML como parâmetro.
 function desafios(section) {
+  // Atualiza o conteúdo interno do elemento 'section' com uma estrutura HTML.
   section.innerHTML = `<header>
       <h4>Projetos</h4>
       
