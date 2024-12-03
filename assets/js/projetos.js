@@ -1,3 +1,4 @@
+// A função 'projetos' é responsável por atualizar o conteúdo da seção de projetos da página
 function projetos(section) {
   section.innerHTML = `<header>
       <h2>Projetos</h2>
