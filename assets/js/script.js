@@ -1,17 +1,22 @@
+// Exibe o menu
 function hamburg() {
   const navbar = document.querySelector(".dropdown");
   navbar.style.transform = "translateY(0px)";
 }
+
+// Esconde o menu
 function cancel() {
   const navbar = document.querySelector(".dropdown");
   navbar.style.transform = "translateY(-500px)";
 }
-// Typewriter Effect
+
+// Efeito de máquina de escrever
 const texts = ["DEVELOPER", "DESIGNER"];
 let speed = 100;
 const textElements = document.querySelector(".typewriter-text");
 let textIndex = 0;
 let charcterIndex = 0;
+
 function typeWriter() {
   if (charcterIndex < texts[textIndex].length) {
     textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
@@ -21,6 +26,7 @@ function typeWriter() {
     setTimeout(eraseText, 1000);
   }
 }
+
 function eraseText() {
   if (textElements.innerHTML.length > 0) {
     textElements.innerHTML = textElements.innerHTML.slice(0, -1);
@@ -31,4 +37,6 @@ function eraseText() {
     setTimeout(typeWriter, 500);
   }
 }
+
+// Inicia o efeito de digitação quando a página carrega
 window.onload = typeWriter;
